@@ -76,7 +76,7 @@ Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 
 Bots=[mid,Amid,Bmid,Cmid]
-admin=["u4fe4d946d5525821a17d1b877d7edb7c"]
+admin=["ufa4087012b88a110b5dd26530fa16e7b"]
 wait = {
     'contact':True,
     'autoJoin':True,
@@ -1654,9 +1654,9 @@ def bot(op):
                 kc.sendText(msg.to,"PONG 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
 #-----------------------------------------------
             elif msg.text in ["Respon","respon"]:
-                ki.sendText(msg.to,"Cv1")
-                kk.sendText(msg.to,"Cv2")
-                kc.sendText(msg.to,"Cv3")
+                ki.sendText(msg.to,"1")
+                kk.sendText(msg.to,"2")
+                kc.sendText(msg.to,"3")
 #-----------------------------------------------
 
             elif msg.text in ["Sp","Speed","speed"]:
