@@ -15,59 +15,59 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage ="""khamil Bot
-[Id︎]
-[Mid]
-[Me︎]
-[TL︎:「Text」]
-[Mc 「mid」]
-[K on/off]
-[Join︎ on/off]
-[Gcancel:︎「Number of people」]
-[Group cancelalll︎]
-[Leave︎ on/off]
-[Add on/off]
-[Share on/off]
-[Message change:「text」]
-[Message check]
-[Confirm]
-[Jam on/off]
-[Change clock:「name」]
-[Up]
-[Cv join]
+helpMessage ="""❂TEST BOT/author by khamil❂
+Ω[Id︎]
+Ω[Mid]
+Ω[Me︎]
+Ω[TL︎:「Text」]
+Ω[Mc 「mid」]
+Ω[K on/off]
+Ω[Join︎ on/off]
+Ω[Gcancel:︎「Number of people」]
+Ω[Group cancelalll︎]
+Ω[Leave︎ on/off]
+Ω[Add on/off]
+Ω[Share on/off]
+Ω[Message change:「text」]
+Ω[Message check]
+Ω[Confirm]
+Ω[Jam on/off]
+Ω[Change clock:「name」]
+Ω[Up]
+Ω[Cv join]
 
-[*] Command in the groups [*]
+❂ Command in the groups ❂
 
-[Curl]
-[Ourl]
-[url]
-[url:「Group ID」]
-[Invite：「mid」]
-[Kick：「mid」]
-[Ginfo]
-[jointicket]
-[Cancel]
-[Gn 「group name」]
-[Nk 「name」]
+Ω[Curl]
+Ω[Ourl]
+Ω[url]
+Ω[url:「Group ID」]
+Ω[Invite：「mid」]
+Ω[Kick：「mid」]
+Ω[Ginfo]
+Ω[jointicket]
+Ω[Cancel]
+Ω[Gn 「group name」]
+Ω[Nk 「name」]
 
-[*] Command kicker only [*]
+❂ Command kicker only ❂
 
-[Bye]
-[Kill ban]
-[Kill 「@」]
-[Ban 「@」] By Tag
-[Unban 「@」] By Tag
-[Ban︎] Share Contact
-[Unban︎] Share Contact
-[Banlist︎]
-[Cek ban]
-[Cv mid]
-[Cv ︎invite:「mid」]
-[Cv ︎rename:「name」]
-[Cv ︎gift]
-[Respo︎n]
-[Bot cancel]
-[Title:]
+Ω[Bye]
+Ω[Kill ban]
+Ω[Kill 「@」]
+Ω[Ban 「@」] By Tag
+Ω[Unban 「@」] By Tag
+Ω[Ban︎] Share Contact
+Ω[Unban︎] Share Contact
+Ω[Banlist︎]
+Ω[Cek ban]
+Ω[Cv mid]
+Ω[Cv ︎invite:「mid」]
+Ω[Cv ︎rename:「name」]
+Ω[Cv ︎gift]
+Ω[Respo︎n]
+Ω[Bot cancel]
+Ω[Title:]
 """
 KAC=[cl,ki,kk,kc]
 mid = cl.getProfile().mid
