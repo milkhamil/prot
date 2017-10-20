@@ -1484,34 +1484,34 @@ def bot(op):
 		
 #------------------fungsi ratain--------------
             elif "cleanse" in msg.text:
-		if msg.from_ in admin:
-            	    if msg.toType == 2:
-                  	  print "ok"
-                    	_name = msg.text.replace("Cleanse","")
-                    	gs = ki.getGroup(msg.to)
-                    	gs = kk.getGroup(msg.to)
-                    	gs = kc.getGroup(msg.to)
-                    	ki.sendText(msg.to,"Bukan pembantu tappi suka bersih bersih")
-                    	kc.sendText(msg.to,"maaf ya")
-                   	targets = []
-                    	for g in gs.members:
-                        	if _name in g.displayName:
-                            	targets.append(g.mid)
-                    	if targets == []:
-                        	ki.sendText(msg.to,"Not found.")
-                        	kk.sendText(msg.to,"Not found.")
-                        	kc.sendText(msg.to,"Not found.")
-                    else:
-                        for target in targets:
-                            try:
-                                klist=[ki,kk,kc]
-                                kicker=random.choice(klist)
-                                kicker.kickoutFromGroup(msg.to,[target])
-                                print (msg.to,[g.mid])
-                            except:
-                                ki.sendText(msg.to,"Group cleanse")
-                                kk.sendText(msg.to,"Group cleanse")
-                                kc.sendText(msg.to,"Group cleanse")
+		  if msg.from_ in admin:
+            	      if msg.toType == 2:
+                  	    print "ok"
+                      	  _name = msg.text.replace("Cleanse","")
+                    	  gs = ki.getGroup(msg.to)
+                    	  gs = kk.getGroup(msg.to)
+                    	  gs = kc.getGroup(msg.to)
+                    	  ki.sendText(msg.to,"Bukan pembantu tappi suka bersih bersih")
+                    	  kc.sendText(msg.to,"maaf ya")
+                   	  targets = []
+                    	  for g in gs.members:
+                        	  if _name in g.displayName:
+                            	  targets.append(g.mid)
+                    	  if targets == []:
+                        	  ki.sendText(msg.to,"Not found.")
+                        	  kk.sendText(msg.to,"Not found.")
+                        	  kc.sendText(msg.to,"Not found.")
+                      else:
+                          for target in targets:
+                              try:
+                                  klist=[ki,kk,kc]
+                                  kicker=random.choice(klist)
+                                  kicker.kickoutFromGroup(msg.to,[target])
+                                  print (msg.to,[g.mid])
+		              except:
+                                  ki.sendText(msg.to,"Group cleanse")
+                                  kk.sendText(msg.to,"Group cleanse")
+                                  kc.sendText(msg.to,"Group cleanse")
             elif "Nk " in msg.text:
                   if msg.from_ in admin:
                        nk0 = msg.text.replace("Nk ","")
