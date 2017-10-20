@@ -15,7 +15,7 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage ="""❂TEST BOT/author by khamil❂
+helpMessage ="""❂TEST BOT❂
 Ω[Id︎]
 Ω[Mid]
 Ω[Me︎]
@@ -68,6 +68,7 @@ helpMessage ="""❂TEST BOT/author by khamil❂
 Ω[Respo︎n]
 Ω[Bot cancel]
 Ω[Title:]
+author by https://www.instagram.com/milkhamil
 """
 KAC=[cl,ki,kk,kc]
 mid = cl.getProfile().mid
@@ -76,7 +77,7 @@ Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 
 Bots=[mid,Amid,Bmid,Cmid]
-admin=["ufa4087012b88a110b5dd26530fa16e7b"]
+admin=["ud593d69ec966c43f1d630d8e228871f0"]
 wait = {
     'contact':True,
     'autoJoin':True,
