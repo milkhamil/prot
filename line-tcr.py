@@ -17,13 +17,14 @@ sys.setdefaultencoding('utf-8')
 
 helpMessage ="""❂TEST BOT❂
 Ω[Id︎]
-Ω[Mid]
-Ω[Me︎]
+Ω[Mid] lihat mid user 
+Ω[$set] set read point
+Ω[$read] lihat yg baca read point
 Ω[TL︎:「Text」]
 Ω[Mc 「mid」]
 Ω[K on/off]
 Ω[Join︎ on/off]
-Ω[Gcancel:︎「Number of people」]
+Ω[Gcancel:︎「jumlah orang」]
 Ω[Group cancelalll︎]
 Ω[Leave︎ on/off]
 Ω[Add on/off]
@@ -36,7 +37,7 @@ helpMessage ="""❂TEST BOT❂
 Ω[Up]
 Ω[Cv join]
 
-❂ Command in the groups ❂
+❂ Admin Command ❂
 
 Ω[Curl]
 Ω[Ourl]
@@ -49,20 +50,15 @@ helpMessage ="""❂TEST BOT❂
 Ω[Cancel]
 Ω[Gn 「group name」]
 Ω[Nk 「name」]
-
-❂ Command kicker only ❂
-
 Ω[Bye]
 Ω[Kill ban]
 Ω[Kill 「@」]
-Ω[Ban 「@」] By Tag
-Ω[Unban 「@」] By Tag
-Ω[Ban︎] Share Contact
-Ω[Unban︎] Share Contact
+Ω[Ban Tag/send contact]
+Ω[Unban Tag/send contact]
 Ω[Banlist︎]
 Ω[Cek ban]
-Ω[Cv mid]
-Ω[Cv ︎invite:「mid」]
+Ω[mid]
+Ω[invite「mid」]
 Ω[Cv ︎rename:「name」]
 Ω[Cv ︎gift]
 Ω[Respo︎n]
@@ -77,7 +73,7 @@ Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 
 Bots=[mid,Amid,Bmid,Cmid]
-admin=["ud593d69ec966c43f1d630d8e228871f0"]
+admin=["uc675e99a076343c4da17618d87689ce9"]
 wait = {
     'contact':True,
     'autoJoin':True,
@@ -1116,7 +1112,7 @@ def bot(op):
                     cl.sendText(msg.to,str(i) + "Deleted albums")
                 else:
                     cl.sendText(msg.to,str(i) + "åˆ é™¤äº†äº‹çš„ç›¸å†Œã€‚")
-            elif msg.text in ["Group id","ç¾¤çµ„å…¨id"]:
+            elif msg.text in ["Gid","ç¾¤çµ„å…¨id"]:
                 gid = cl.getGroupIdsJoined()
                 h = ""
                 for i in gid:
@@ -1130,8 +1126,8 @@ def bot(op):
                     cl.sendText(msg.to,"All invitations have been refused")
                 else:
                     cl.sendText(msg.to,"æ‹’ç»äº†å…¨éƒ¨çš„é‚€è¯·ã€‚")
-            elif "album removeâ†’" in msg.text:
-                gid = msg.text.replace("album removeâ†’","")
+            elif "album remove" in msg.text:
+                gid = msg.text.replace("album remove","")
                 albums = cl.getAlbum(gid)["result"]["items"]
                 i = 0
                 if albums != []:
