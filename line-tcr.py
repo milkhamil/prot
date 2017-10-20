@@ -15,56 +15,60 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage ="""❂TEST BOT❂
-Ω[Id︎]
-Ω[Mid] lihat mid user 
-Ω[$set] set read point
-Ω[$read] lihat yg baca read point
-Ω[TL︎:「Text」]
-Ω[Mc 「mid」]
+helpMessage ="""┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+❂General Command❂
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+Ω[Id]
+Ω[Mid]
+Ω[$set]
+Ω[$read]
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+❂ Admin Command ❂
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+Ω[TL:「Text」]
+Ω[Mc 「Mid」]
 Ω[K on/off]
-Ω[Join︎ on/off]
-Ω[Gcancel:︎「jumlah orang」]
-Ω[Group cancelalll︎]
-Ω[Leave︎ on/off]
+Ω[Join on/off]
+Ω[Gcancel:「Number of member」]
+Ω[Group cancelalll]
+Ω[Leave on/off]
 Ω[Add on/off]
 Ω[Share on/off]
-Ω[Message change:「text」]
+Ω[Message change:「Text」]
 Ω[Message check]
 Ω[Confirm]
 Ω[Jam on/off]
 Ω[Change clock:「name」]
 Ω[Up]
 Ω[Cv join]
-
-❂ Admin Command ❂
-
 Ω[Curl]
 Ω[Ourl]
 Ω[url]
 Ω[url:「Group ID」]
-Ω[Invite：「mid」]
-Ω[Kick：「mid」]
+Ω[Invite「Mid」]
+Ω[Kick「Mid」]
 Ω[Ginfo]
 Ω[jointicket]
 Ω[Cancel]
 Ω[Gn 「group name」]
-Ω[Nk 「name」]
+Ω[Nk 「Tag」]
 Ω[Bye]
-Ω[Kill ban]
-Ω[Kill 「@」]
-Ω[Ban Tag/send contact]
-Ω[Unban Tag/send contact]
-Ω[Banlist︎]
-Ω[Cek ban]
+Ω[Kill banlist]
+Ω[Kill 「tag」]
+Ω[Ban「Tag/send contact」]
+Ω[Unban「Tag/send contact」]
+Ω[Banlist]
 Ω[mid]
-Ω[invite「mid」]
-Ω[Cv ︎rename:「name」]
-Ω[Cv ︎gift]
-Ω[Respo︎n]
+Ω[invite「Mid」]
+Ω[Cv rename:「name」]
+Ω[Cv gift]
+Ω[Respon]
 Ω[Bot cancel]
 Ω[Title:]
-author by https://www.instagram.com/milkhamil
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+author by
+www.instagram.com/milkhamil
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 """
 KAC=[cl,ki,kk,kc]
 mid = cl.getProfile().mid
