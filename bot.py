@@ -15,18 +15,18 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage ="""-----------------------------
+helpMessage ="""----------------------------------------------------------
 ☗ General Command ☗
------------------------------
+----------------------------------------------------------
 ★[Id]
 ★[Mid]
 ★[$set]
 ★[$read]
- -----------------------------
+ ----------------------------------------------------------
 ☗ Admin Command ☗
------------------------------
+----------------------------------------------------------
 ★[TL:「Text」]
-★[Mc ?Mid」]
+★[Mc「Mid」]
 ★[K on/off]
 ★[Join on/off]
 ★[Gcancel:「Number of member」]
@@ -34,41 +34,41 @@ helpMessage ="""-----------------------------
 ★[Leave on/off]
 ★[Add on/off]
 ★[Share on/off]
-★[Message change: 「Text」]
+★[Message change:「Text」]
 ★[Message check]
 ★[Confirm]
 ★[Jam on/off]
-★[Change clock: 「name」]
+★[Change clock:「name」]
 ★[Up]
 ★[Cv join]
 ★[Curl]
 ★[Ourl]
 ★[url]
-★[url: 「Group ID」]
-★[Invite 「Mid」]
-★[Kick 「Mid」]
+★[url:「Group ID」]
+★[Invite「Mid」]
+★[Kick「Mid」]
 ★[Ginfo]
 ★[jointicket]
 ★[Cancel]
-★[Gn 「group name]
-★[Nk 「Tag」]
+★[Gn「group name]
+★[Nk「Tag」]
 ★[Bye]
 ★[Kill banlist]
-★[Kill 「tag」]
-★[Ban 「Tag/send contact」]
-★[Unban 「Tag/send contact」]
+★[Kill「tag」]
+★[Ban「Tag/send contact」]
+★[Unban「Tag/send contact」]
 ★[Banlist]
 ★[mid]
-★[invite 「Mid」]
-★[Cv rename: 「name」]
+★[invite「Mid」]
+★[Cv rename:「name」]
 ★[Cv gift]
 ★[Respon]
 ★[Bot cancel]
 ★[Title:]
------------------------------
+----------------------------------------------------------
 author by
 www.instagram.com/milkhamil
------------------------------
+----------------------------------------------------------
 """
 KAC=[cl,ki,kk,kc]
 mid = cl.getProfile().mid
