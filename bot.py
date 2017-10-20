@@ -1496,7 +1496,7 @@ def bot(op):
                    	  targets = []
                     	  for g in gs.members:
                         	  if _name in g.displayName:
-                            	  targets.append(g.mid)
+                            	      targets.append(g.mid)
                     	  if targets == []:
                         	  ki.sendText(msg.to,"Not found.")
                         	  kk.sendText(msg.to,"Not found.")
