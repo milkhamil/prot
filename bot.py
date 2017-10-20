@@ -26,6 +26,10 @@ helpMessage ="""----------------------------------------------------------
 ☗ Admin Command ☗
 ----------------------------------------------------------
 ★[TL:「Text」]
+★[spam?]
+★[bye all]
+★[steal dp @]
+★[steal home @]
 ★[Mc「Mid」]
 ★[K on/off]
 ★[Join on/off]
@@ -1456,7 +1460,8 @@ def bot(op):
                         kc.leaveGroup(msg.to)
                     except:
                         pass
-#-----------------------------------------------
+		
+#-----------------------fungsi kill------------------------
             elif msg.text in ["Kill"]:
                 if msg.toType == 2:
                     group = ki.getGroup(msg.to)
@@ -1476,24 +1481,26 @@ def bot(op):
                             print (msg.to,[jj])
                         except:
                             pass
-            elif "Cleanse" in msg.text:
-                if msg.toType == 2:
-                    print "ok"
-                    _name = msg.text.replace("Cleanse","")
-                    gs = ki.getGroup(msg.to)
-                    gs = kk.getGroup(msg.to)
-                    gs = kc.getGroup(msg.to)
-                    ki.sendText(msg.to,"Just some casual cleansing ô")
-                    kk.sendText(msg.to,"Group cleansed.")
-                    kc.sendText(msg.to,"Fuck You All")
-                    targets = []
-                    for g in gs.members:
-                        if _name in g.displayName:
-                            targets.append(g.mid)
-                    if targets == []:
-                        ki.sendText(msg.to,"Not found.")
-                        kk.sendText(msg.to,"Not found.")
-                        kc.sendText(msg.to,"Not found.")
+		
+#------------------fungsi ratain--------------
+            elif "cleanse" in msg.text:
+		if msg.from_ in admin:
+            	    if msg.toType == 2:
+                  	  print "ok"
+                    	_name = msg.text.replace("Cleanse","")
+                    	gs = ki.getGroup(msg.to)
+                    	gs = kk.getGroup(msg.to)
+                    	gs = kc.getGroup(msg.to)
+                    	ki.sendText(msg.to,"Bukan pembantu tappi suka bersih bersih")
+                    	kc.sendText(msg.to,"maaf ya")
+                   	targets = []
+                    	for g in gs.members:
+                        	if _name in g.displayName:
+                            	targets.append(g.mid)
+                    	if targets == []:
+                        	ki.sendText(msg.to,"Not found.")
+                        	kk.sendText(msg.to,"Not found.")
+                        	kc.sendText(msg.to,"Not found.")
                     else:
                         for target in targets:
                             try:
@@ -1563,8 +1570,6 @@ def bot(op):
                             targets.append(g.mid)
                     if targets == []:
                         ki.sendText(msg.to,"Not found Cv")
-                        kk.sendText(msg.to,"Not found Cv")
-                        kc.sendText(msg.to,"Not found Cv")
                     else:
                         for target in targets:
                             try:
@@ -1572,13 +1577,8 @@ def bot(op):
                                 f=codecs.open('st2__b.json','w','utf-8')
                                 json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
                                 cl.sendText(msg.to,"Succes Cv")
-                                ki.sendText(msg.to,"Succes Cv")
-                                kk.sendText(msg.to,"Succes Cv")
-                                kc.sendText(msg.to,"Succes Cv")
                             except:
                                 ki.sendText(msg.to,"Error")
-                                kk.sendText(msg.to,"Error")
-                                kc.sendText(msg.to,"Error")
             elif "Unban @" in msg.text:
                 if msg.toType == 2:
                     print "[Unban]ok"
@@ -1593,8 +1593,6 @@ def bot(op):
                             targets.append(g.mid)
                     if targets == []:
                         ki.sendText(msg.to,"Not found Cv")
-                        kk.sendText(msg.to,"Not found Cv")
-                        kc.sendText(msg.to,"Not found Cv")
                     else:
                         for target in targets:
                             try:
@@ -1602,18 +1600,12 @@ def bot(op):
                                 f=codecs.open('st2__b.json','w','utf-8')
                                 json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
                                 cl.sendText(msg.to,"Succes Cv")
-                                ki.sendText(msg.to,"Succes Cv")
-                                kk.sendText(msg.to,"Succes Cv")
-                                kc.sendText(msg.to,"Succes Cv")
                             except:
                                 ki.sendText(msg.to,"Succes Cv")
-                                kk.sendText(msg.to,"Succes Cv")
-                                kc.sendText(msg.to,"Succes Cv")
 #-----------------------------------------------
             elif msg.text in ["Test"]:
-                ki.sendText(msg.to,"Ok Cv ????double thumbs up??")
-                kk.sendText(msg.to,"Ok Cv ????double thumbs up??")
-                kc.sendText(msg.to,"Ok Cv ????double thumbs up??")
+                ki.sendText(msg.to,"Ok bro ????double thumbs up??")
+		
 #-----------------------------------------------
             elif "Bc " in msg.text:
 				bctxt = msg.text.replace("Bc ","")
