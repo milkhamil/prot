@@ -1620,55 +1620,15 @@ def bot(op):
 				ki.sendText(msg.to,(bctxt))
 				kk.sendText(msg.to,(bctxt))
 				kc.sendText(msg.to,(bctxt))
+#-------------------ABSEN-------------------------
+            elif msg.text in ["Absen","absen"]:
+                ki.sendText(msg.to,"hadir")
 #-----------------------------------------------
-
-            elif msg.text in ["Cv say hi"]:
-                ki.sendText(msg.to,"Hi buddy ????Har Har??")
-                kk.sendText(msg.to,"Hi buddy ????Har Har??")
-                kc.sendText(msg.to,"Hi buddy ????Har Har??")
-
-#-----------------------------------------------
-
-            elif msg.text in ["Cv say hinata pekok"]:
-                ki.sendText(msg.to,"Hinata pekok ????Har Har??")
-                kk.sendText(msg.to,"Hinata pekok ????Har Har??")
-                kc.sendText(msg.to,"Hinata pekok ????Har Har??")
-            elif msg.text in ["Cv say didik pekok"]:
-                ki.sendText(msg.to,"Didik pekok ????Har Har??")
-                kk.sendText(msg.to,"Didik pekok ????Har Har??")
-                kc.sendText(msg.to,"Didik pekok ????Har Har??")
-            elif msg.text in ["Cv say bobo ah","Bobo dulu ah"]:
-                ki.sendText(msg.to,"Have a nice dream Cv ????Har Har??")
-                kk.sendText(msg.to,"Have a nice dream Cv ????Har Har??")
-                kc.sendText(msg.to,"Have a nice dream Cv ????Har Har??")
-            elif msg.text in ["Cv say chomel pekok"]:
-                ki.sendText(msg.to,"Chomel pekok ????Har Har??")
-                kk.sendText(msg.to,"Chomel pekok ????Har Har??")
-                kc.sendText(msg.to,"Chomel pekok ????Har Har??")
-            elif msg.text in ["#welcome"]:
-                ki.sendText(msg.to,"Selamat datang di Chivas Family Room")
-                kk.sendText(msg.to,"Jangan nakal ok!")
-#-----------------------------------------------
-            elif msg.text in ["PING","Ping","ping"]:
-                ki.sendText(msg.to,"PONG ????double thumbs up??????Har Har??")
-                kk.sendText(msg.to,"PONG ????double thumbs up??????Har Har??")
-                kc.sendText(msg.to,"PONG ????double thumbs up??????Har Har??")
-#-----------------------------------------------
-            elif msg.text in ["Respon","respon"]:
-                ki.sendText(msg.to,"1")
-                kk.sendText(msg.to,"2")
-                kc.sendText(msg.to,"3")
-#-----------------------------------------------
-
             elif msg.text in ["Sp","Speed","speed"]:
                 start = time.time()
                 cl.sendText(msg.to, "Progress...")
                 elapsed_time = time.time() - start
                 cl.sendText(msg.to, "%sseconds" % (elapsed_time))
-                ki.sendText(msg.to, "%sseconds" % (elapsed_time))
-                kk.sendText(msg.to, "%sseconds" % (elapsed_time))
-                kc.sendText(msg.to, "%sseconds" % (elapsed_time))
-
 #------------------------------------------------------------------	
             elif "Steal home @" in msg.text:            
                 print "[Command]dp executing"
@@ -1713,6 +1673,73 @@ def bot(op):
                             pass
                 print "[Command]dp executed"			
 #------------------------------------------------------------------
+                if msg.text == "Spam?":
+                    sendMessage(msg.to,"3")
+                    sendMessage(msg.to,"2")
+                    sendMessage(msg.to,"1")
+                    sendMessage(msg.to,"Fuck Off")
+                    sendMessage(msg.to,"Ku mengejar bus yang mulai berjalan")
+                    sendMessage(msg.to,"Ku ingin ungkapkan kepada dirimu")
+                    sendMessage(msg.to,"Kabut dalam hatiku telah menghilang")
+                    sendMessage(msg.to,"Dan hal yang penting bagiku pun terlihat")
+                    sendMessage(msg.to,"Walaupun jawaban itu sebenarnya begitu mudah")
+                    sendMessage(msg.to,"Tetapi entah mengapa diriku melewatkannya")
+                    sendMessage(msg.to,"Untukku menjadi diri sendiri")
+                    sendMessage(msg.to,"Ku harus jujur, pada perasaanku")
+                    sendMessage(msg.to,"Ku suka dirimu ku suka")
+                    sendMessage(msg.to,"Ku berlari sekuat tenaga")
+                    sendMessage(msg.to,"Ku suka selalu ku suka")
+                    sendMessage(msg.to,"Ku teriak sebisa suaraku")
+                    sendMessage(msg.to,"Ku suka dirimu ku suka")
+                    sendMessage(msg.to,"Walau susah untukku bernapas")
+                    sendMessage(msg.to,"Tak akan ku sembunyikan")
+                    sendMessage(msg.to,"Oogoe daiyamondo~")
+                    sendMessage(msg.to,"Saat ku sadari sesuatu menghilang")
+                    sendMessage(msg.to,"Hati ini pun resah tidak tertahankan")
+                    sendMessage(msg.to,"Sekarang juga yang bisa ku lakukan")
+                    sendMessage(msg.to,"Merubah perasaan ke dalam kata kata")
+                    sendMessage(msg.to,"Mengapa sedari tadi")
+                    sendMessage(msg.to,"Aku hanya menatap langit")
+                    sendMessage(msg.to,"Mataku berkaca kaca")
+                    sendMessage(msg.to,"Berlinang tak bisa berhenti")
+                    sendMessage(msg.to,"Di tempat kita tinggal, didunia ini")
+                    sendMessage(msg.to,"Dipenuhi cinta, kepada seseorang")
+                    sendMessage(msg.to,"Ku yakin ooo ku yakin")
+                    sendMessage(msg.to,"Janji tak lepas dirimu lagi")
+                    sendMessage(msg.to,"Ku yakin ooo ku yakin")
+                    sendMessage(msg.to,"Akhirnya kita bisa bertemu")
+                    sendMessage(msg.to,"Ku yakin ooo ku yakin")
+                    sendMessage(msg.to,"Ku akan bahagiakan dirimu")
+                    sendMessage(msg.to,"Ku ingin kau mendengarkan")
+                    sendMessage(msg.to,"Oogoe daiyamondo~")
+                    sendMessage(msg.to,"Jika jika kamu ragu")
+                    sendMessage(msg.to,"Takkan bisa memulai apapun")
+                    sendMessage(msg.to,"Ungkapkan perasaanmu")
+                    sendMessage(msg.to,"Jujurlah dari sekarang juga")
+                    sendMessage(msg.to,"Jika kau bersuar")
+                    sendMessage(msg.to,"Cahaya kan bersinar")
+                    sendMessage(msg.to,"Ku suka dirimu ku suka")
+                    sendMessage(msg.to,"Ku berlari sekuat tenaga")
+                    sendMessage(msg.to,"Ku suka selalu ku suka")
+                    sendMessage(msg.to,"Ku teriak sebisa suaraku")
+                    sendMessage(msg.to,"Ku suka dirimu ku suka")
+                    sendMessage(msg.to,"Sampaikan rasa sayangku ini")
+                    sendMessage(msg.to,"Ku suka selalu ku suka")
+                    sendMessage(msg.to,"Ku teriakkan ditengah angin")
+                    sendMessage(msg.to,"Ku suka dirimu ku suka")
+                    sendMessage(msg.to,"Walau susah untuk ku bernapas")
+                    sendMessage(msg.to,"Tak akan ku sembunyikan")
+                    sendMessage(msg.to,"Oogoe daiyamondo~")
+                    sendMessage(msg.to,"Katakan dengan berani")
+                    sendMessage(msg.to,"Jika kau diam kan tetap sama")
+                    sendMessage(msg.to,"Janganlah kau merasa malu")
+                    sendMessage(msg.to,"“Suka” itu kata paling hebat!")
+                    sendMessage(msg.to,"“Suka” itu kata paling hebat!")
+                    sendMessage(msg.to,"“Suka” itu kata paling hebat!")
+                    sendMessage(msg.to,"Ungkapkan perasaanmu")
+                    sendMessage(msg.to,"Jujurlah dari sekarang juga..")
+                    sendMessage(msg.to,"SPAM IS DONE")
+			
             elif msg.text in ["Ban"]:
                 wait["wblacklist"] = True
                 cl.sendText(msg.to,"send contact")
