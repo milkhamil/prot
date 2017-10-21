@@ -39,6 +39,7 @@ helpMessage =""" Chivas Bot
 [*] Command in the groups [*]
 
 [Curl]
+[Sendspam]
 [Ourl]
 [url]
 [url:「Group ID」]
@@ -66,7 +67,7 @@ helpMessage =""" Chivas Bot
 [Cv mid]
 [Cv ︎invite:「mid」]
 [Cv ︎rename:「name」]
-[Cv ︎gift]
+[Gift]
 [Respo︎n]
 [Bot cancel]
 [Title:]
@@ -78,7 +79,7 @@ Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 
 Bots=[mid,Amid,Bmid,Cmid]
-admin=["YOUR_MID_HERE"]
+admin=["u4fe4d946d5525821a17d1b877d7edb7c","YOUR_MID_HERE"]
 wait = {
     'contact':True,
     'autoJoin':True,
@@ -86,20 +87,20 @@ wait = {
     'leaveRoom':True,
     'timeline':True,
     'autoAdd':True,
-    'message':"Thanks for add me",
+    'message':"Thanks for add me, if you have any questions you can drop a DM to my owner www.instagram.com/milkhamil",
     "lang":"JP",
-    "comment":"Thanks for add me",
-    "commentOn":False,
+    "comment":"Thanks for add me, if you have any questions you can drop a DM to my owner www.instagram.com/milkhamil",
+    "commentOn":True,
     "commentBlack":{},
     "wblack":False,
     "dblack":False,
-    "clock":True,
-    "cName":"Chivas ",
+    "clock":False,
+    "cName":"MIL BOTs ",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
     "protectionOn":True,
-    "atjointicket":False
+    "atjointicket":True,
     }
 
 wait2 = {
@@ -1619,118 +1620,71 @@ def bot(op):
 									kc.sendText(msg.to,"Succes bro")
 #-----------------fungsi spam-----------------------
             elif msg.text in ["Sendspam","sendspam"]:
-                msg.contentType = 9
-                msg.contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58',
-                                    'PRDTYPE': 'THEME',
-                                    'MSGTPL': '5'}
-                msg.text = None
-                cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
-		cl.sendMessage(msg)
+				if msg.from_ in admin:
+					msg.contentType = 9
+					msg.contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58',
+										'PRDTYPE': 'THEME',
+										'MSGTPL': '5'}
+					msg.text = None
+					cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			cl.sendMessage(msg)
+			
 		
 #-----------------------------------------------
-            elif "Bc " in msg.text:
-				bctxt = msg.text.replace("Bc ","")
-				ki.sendText(msg.to,(bctxt))
-				kk.sendText(msg.to,(bctxt))
-				kc.sendText(msg.to,(bctxt))
+            elif "Say "."say " in msg.text:
+				saytxt = msg.text.replace("Say ","")
+				ki.sendText(msg.to,(saytxt))
+				kk.sendText(msg.to,(saytxt))
+				kc.sendText(msg.to,(saytxt))
 #-----------------------------------------------
 
             elif msg.text in ["Cv say hi"]:
