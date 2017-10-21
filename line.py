@@ -1678,7 +1678,7 @@ def bot(op):
 					cl.sendMessage(msg)
 					
 #-----------------------------------------------
-            elif "Say ","say " in msg.text:
+            elif "Say " in msg.text:
 				saytxt = msg.text.replace("Say ","")
 				ki.sendText(msg.to,(saytxt))
 				kk.sendText(msg.to,(saytxt))
