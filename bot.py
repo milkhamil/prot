@@ -26,8 +26,8 @@ helpMessage ="""----------------------------------------------------------
 ☗ Admin Command ☗
 ----------------------------------------------------------
 ★[TL:「Text」]
-★[spam?]
-★[bye all]✔
+★[Sendspam]
+★[Bye all]✔
 ★[steal dp @]
 ★[steal home @]
 ★[Mc「Mid」]
@@ -64,8 +64,8 @@ helpMessage ="""----------------------------------------------------------
 ★[mid]
 ★[invite「Mid」]✔
 ★[Cv rename:「name」]
-★[gift]
-★[Respon]
+★[Gift]✔
+★[Absen]✔
 ★[Bot cancel]
 ----------------------------------------------------------
 author by
@@ -82,14 +82,14 @@ Bots=[mid,Amid,Bmid,Cmid]
 admin=["uc675e99a076343c4da17618d87689ce9"]
 wait = {
     'contact':True,
-    'Autojoin':True,
-    'Autocancel':{"on":True,"members":1},
+    'autoJoin':True,
+    'autoCancel':{"on":True,"members":1},
     'leaveRoom':True,
     'timeline':True,
     'autoAdd':True,
-    'message':"Thanks for add me",
+    'message':"Thanks for add me, if you have any questions or problem with this account you can drop a DM to my owner www.instagram.com/milkhamil",
     "lang":"JP",
-    "comment":"Thanks for add me",
+    "comment":"autolike by milkhamil",
     "commentOn":False,
     "commentBlack":{},
     "wblack":False,
