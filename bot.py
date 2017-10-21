@@ -1481,7 +1481,7 @@ def bot(op):
                             pass
 		
 #------------------fungsi ratain--------------
-            elif "cleanse" in msg.text:
+            elif "Cleanse" in msg.text:
 		  if msg.from_ in admin:
             	      if msg.toType == 2:
                   	  print "ok"
@@ -1494,7 +1494,7 @@ def bot(op):
                    	  targets = []
                     	  for g in gs.members:
                         	  if _name in g.displayName:
-                            	  targets.append(g.mid)
+                            	      targets.append(g.mid)
                     	  if targets == []:
                         	  ki.sendText(msg.to,"Not found.")
                         	  kk.sendText(msg.to,"Not found.")
@@ -1510,6 +1510,7 @@ def bot(op):
                                   ki.sendText(msg.to,"Group cleanse")
                                   kk.sendText(msg.to,"Group cleanse")
                                   kc.sendText(msg.to,"Group cleanse")
+					
             elif "Nk " in msg.text:
                   if msg.from_ in admin:
                        nk0 = msg.text.replace("Nk ","")
