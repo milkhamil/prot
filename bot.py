@@ -18,57 +18,55 @@ sys.setdefaultencoding('utf-8')
 helpMessage ="""----------------------------------------------------------
 ☗ General Command ☗
 ----------------------------------------------------------
-★[Id]
-★[Mid]
-★[$set]
+★[Id]✔
+★[Mid]✔
+★[$set]✔
 ★[$read]
  ----------------------------------------------------------
 ☗ Admin Command ☗
 ----------------------------------------------------------
 ★[TL:「Text」]
 ★[spam?]
-★[bye all]
+★[bye all]✔
 ★[steal dp @]
 ★[steal home @]
 ★[Mc「Mid」]
 ★[K on/off]
-★[Join on/off]
+★[Join on/off]✔
 ★[Gcancel:「Number of member」]
 ★[Group cancelalll]
-★[Leave on/off]
-★[Add on/off]
-★[Share on/off]
-★[Message change:「Text」]
-★[Message check]
+★[Leave on/off]✔
+★[Add on/off]✔
+★[Share on/off]✔
+★[Message change:「Text」]✔
+★[Message check]✔
 ★[Confirm]
-★[Jam on/off]
+★[Jam on/off]✔
 ★[Change clock:「name」]
-★[Up]
+★[Up]✔
 ★[Cv join]
-★[Curl]
-★[Ourl]
+★[Curl]✔
+★[Ourl]✔
 ★[url]
 ★[url:「Group ID」]
-★[Invite「Mid」]
-★[Kick「Mid」]
-★[Ginfo]
+★[Invite「Mid」]✔
+★[Kick「Mid」]✔
+★[Ginfo]✔
 ★[jointicket]
-★[Cancel]
-★[Gn「group name]
-★[Nk「Tag」]
-★[Bye]
-★[Kill banlist]
+★[Clearinvites]✔
+★[Gn「group name]✔
+★[Nk「Tag」]✔
+★[Kill banlist]✔
 ★[Kill「tag」]
-★[Ban「Tag/send contact」]
-★[Unban「Tag/send contact」]
-★[Banlist]
+★[Ban「Tag/send contact」]✔
+★[Unban「Tag/send contact」]✔
+★[Banlist]✔
 ★[mid]
-★[invite「Mid」]
+★[invite「Mid」]✔
 ★[Cv rename:「name」]
-★[Cv gift]
+★[gift]
 ★[Respon]
 ★[Bot cancel]
-★[Title:]
 ----------------------------------------------------------
 author by
 www.instagram.com/milkhamil
@@ -81,11 +79,11 @@ Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 
 Bots=[mid,Amid,Bmid,Cmid]
-admin=["ua0e9e968f766c7d64ed69c38c7b9e969"]
+admin=["uc675e99a076343c4da17618d87689ce9"]
 wait = {
     'contact':True,
-    'autoJoin':True,
-    'autoCancel':{"on":True,"members":1},
+    'Autojoin':True,
+    'Autocancel':{"on":True,"members":1},
     'leaveRoom':True,
     'timeline':True,
     'autoAdd':True,
@@ -202,16 +200,16 @@ def bot(op):
             print op.param3
             if mid in op.param3:
                 G = cl.getGroup(op.param1)
-                if wait["autoJoin"] == True:
-                    if wait["autoCancel"]["on"] == True:
-                        if len(G.members) <= wait["autoCancel"]["members"]:
+                if wait["Autojoin"] == True:
+                    if wait["Autocancel"]["on"] == True:
+                        if len(G.members) <= wait["Autocancel"]["members"]:
                             cl.rejectGroupInvitation(op.param1)
                         else:
                             cl.acceptGroupInvitation(op.param1)
                     else:
                         cl.acceptGroupInvitation(op.param1)
-                elif wait["autoCancel"]["on"] == True:
-                    if len(G.members) <= wait["autoCancel"]["members"]:
+                elif wait["Autocancel"]["on"] == True:
+                    if len(G.members) <= wait["Autocancel"]["members"]:
                         cl.rejectGroupInvitation(op.param1)
             else:
                 Inviter = op.param3.replace("",',')
@@ -371,16 +369,16 @@ def bot(op):
         if op.type == 13:
             if mid in op.param3:
                 G = cl.getGroup(op.param1)
-                if wait["autoJoin"] == True:
-                    if wait["autoCancel"]["on"] == True:
-                        if len(G.members) <= wait["autoCancel"]["members"]:
+                if wait["Autojoin"] == True:
+                    if wait["Autocancel"]["on"] == True:
+                        if len(G.members) <= wait["Autocancel"]["members"]:
                             cl.rejectGroupInvitation(op.param1)
                         else:
                             cl.acceptGroupInvitation(op.param1)
                     else:
                         cl.acceptGroupInvitation(op.param1)
-                elif wait["autoCancel"]["on"] == True:
-                    if len(G.members) <= wait["autoCancel"]["members"]:
+                elif wait["Autocancel"]["on"] == True:
+                    if len(G.members) <= wait["Autocancel"]["members"]:
                         cl.rejectGroupInvitation(op.param1)
             else:
                 Inviter = op.param3.replace("",',')
@@ -778,7 +776,7 @@ def bot(op):
 				group=cl.findGroupByTicket(ticket_id)
 				cl.acceptGroupInvitationByTicket(group.id,ticket_id)
 				cl.sendText(msg.to,"Sukses join ke grup %s" % str(group.name))
-            elif msg.text == "Gi":
+            elif msg.text == "Ginfo":
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -794,9 +792,9 @@ def bot(op):
                             u = "close"
                         else:
                             u = "open"
-                        cl.sendText(msg.to,">group name\n" + str(ginfo.name) + "\n[gid]\n" + msg.to + "\n[group creator]\n" + gCreator + "\n[profile status]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus + "\nmembers:" + str(len(ginfo.members)) + "members\npending:" + sinvitee + "people\nURL:" + u + "it is inside")
+                        cl.sendText(msg.to,"✔group name\n" + str(ginfo.name) + "✔\n[gid]\n" + msg.to + "✔\n[group creator]\n" + gCreator + "\n[profile status]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus + "\nmembers:" + str(len(ginfo.members)) + "members\npending:" + sinvitee + "people\nURL:" + u + "it is inside")
                     else:
-                        cl.sendText(msg.to,">group name\n" + str(ginfo.name) + "\n[gid]\n" + msg.to + "\n[group creator]\n" + gCreator + "\n[profile status]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus)
+                        cl.sendText(msg.to,"✔group name\n" + str(ginfo.name) + "✔\n[gid]\n" + msg.to + "✔\n[group creator]\n" + gCreator + "\n[profile status]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus)
                 else:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Can not be used outside the group")
@@ -960,25 +958,25 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"done")
             elif msg.text in ["èªååå :ãªã³","Join on","Auto join:on","èªååå ï¼é"]:
-                if wait["autoJoin"] == True:
+                if wait["Autojoin"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already on")
                     else:
                         cl.sendText(msg.to,"done")
                 else:
-                    wait["autoJoin"] = True
+                    wait["Autojoin"] = True
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already on")
                     else:
                         cl.sendText(msg.to,"done")
             elif msg.text in ["èªååå :ãªã","Join off","Auto join:off","èªååå ï¼é"]:
-                if wait["autoJoin"] == False:
+                if wait["Autojoin"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already off")
                     else:
                         cl.sendText(msg.to,"done")
                 else:
-                    wait["autoJoin"] = False
+                    wait["Autojoin"] = False
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already off")
                     else:
@@ -987,14 +985,14 @@ def bot(op):
                 try:
                     strnum = msg.text.replace("Gcancel:","")
                     if strnum == "off":
-                        wait["autoCancel"]["on"] = False
+                        wait["Autocancel"]["on"] = False
                         if wait["lang"] == "JP":
                             cl.sendText(msg.to,"Invitation refused turned off\nTo turn on please specify the number of people and send")
                         else:
                             cl.sendText(msg.to,"å³äºéè¯·æç»ãè¦æ¶å¼è¯·æå®äººæ°åé")
                     else:
                         num =  int(strnum)
-                        wait["autoCancel"]["on"] = True
+                        wait["Autocancel"]["on"] = True
                         if wait["lang"] == "JP":
                             cl.sendText(msg.to,strnum + "The group of people and below decided to automatically refuse invitation")
                         else:
@@ -1056,9 +1054,9 @@ def bot(op):
                 md = ""
                 if wait["contact"] == True: md+=" Contact : on\n"
                 else: md+=" Contact : off\n"
-                if wait["autoJoin"] == True: md+=" Auto join : on\n"
+                if wait["Autojoin"] == True: md+=" Auto join : on\n"
                 else: md +=" Auto join : off\n"
-                if wait["autoCancel"]["on"] == True:md+=" Group cancel :" + str(wait["autoCancel"]["members"]) + "\n"
+                if wait["Autocancel"]["on"] == True:md+=" Group cancel :" + str(wait["Autocancel"]["members"]) + "\n"
                 else: md+= " Group cancel : off\n"
                 if wait["leaveRoom"] == True: md+=" Auto leave : on\n"
                 else: md+=" Auto leave : off\n"
@@ -1496,7 +1494,7 @@ def bot(op):
                    	  targets = []
                     	  for g in gs.members:
                         	  if _name in g.displayName:
-                            	      targets.append(g.mid)
+                            	  targets.append(g.mid)
                     	  if targets == []:
                         	  ki.sendText(msg.to,"Not found.")
                         	  kk.sendText(msg.to,"Not found.")
@@ -1665,72 +1663,152 @@ def bot(op):
                             pass
                 print "[Command]dp executed"			
 #------------------------------------------------------------------
-                if msg.text == "Spam?":
-                    sendMessage(msg.to,"3")
-                    sendMessage(msg.to,"2")
-                    sendMessage(msg.to,"1")
-                    sendMessage(msg.to,"Fuck Off")
-                    sendMessage(msg.to,"Ku mengejar bus yang mulai berjalan")
-                    sendMessage(msg.to,"Ku ingin ungkapkan kepada dirimu")
-                    sendMessage(msg.to,"Kabut dalam hatiku telah menghilang")
-                    sendMessage(msg.to,"Dan hal yang penting bagiku pun terlihat")
-                    sendMessage(msg.to,"Walaupun jawaban itu sebenarnya begitu mudah")
-                    sendMessage(msg.to,"Tetapi entah mengapa diriku melewatkannya")
-                    sendMessage(msg.to,"Untukku menjadi diri sendiri")
-                    sendMessage(msg.to,"Ku harus jujur, pada perasaanku")
-                    sendMessage(msg.to,"Ku suka dirimu ku suka")
-                    sendMessage(msg.to,"Ku berlari sekuat tenaga")
-                    sendMessage(msg.to,"Ku suka selalu ku suka")
-                    sendMessage(msg.to,"Ku teriak sebisa suaraku")
-                    sendMessage(msg.to,"Ku suka dirimu ku suka")
-                    sendMessage(msg.to,"Walau susah untukku bernapas")
-                    sendMessage(msg.to,"Tak akan ku sembunyikan")
-                    sendMessage(msg.to,"Oogoe daiyamondo~")
-                    sendMessage(msg.to,"Saat ku sadari sesuatu menghilang")
-                    sendMessage(msg.to,"Hati ini pun resah tidak tertahankan")
-                    sendMessage(msg.to,"Sekarang juga yang bisa ku lakukan")
-                    sendMessage(msg.to,"Merubah perasaan ke dalam kata kata")
-                    sendMessage(msg.to,"Mengapa sedari tadi")
-                    sendMessage(msg.to,"Aku hanya menatap langit")
-                    sendMessage(msg.to,"Mataku berkaca kaca")
-                    sendMessage(msg.to,"Berlinang tak bisa berhenti")
-                    sendMessage(msg.to,"Di tempat kita tinggal, didunia ini")
-                    sendMessage(msg.to,"Dipenuhi cinta, kepada seseorang")
-                    sendMessage(msg.to,"Ku yakin ooo ku yakin")
-                    sendMessage(msg.to,"Janji tak lepas dirimu lagi")
-                    sendMessage(msg.to,"Ku yakin ooo ku yakin")
-                    sendMessage(msg.to,"Akhirnya kita bisa bertemu")
-                    sendMessage(msg.to,"Ku yakin ooo ku yakin")
-                    sendMessage(msg.to,"Ku akan bahagiakan dirimu")
-                    sendMessage(msg.to,"Ku ingin kau mendengarkan")
-                    sendMessage(msg.to,"Oogoe daiyamondo~")
-                    sendMessage(msg.to,"Jika jika kamu ragu")
-                    sendMessage(msg.to,"Takkan bisa memulai apapun")
-                    sendMessage(msg.to,"Ungkapkan perasaanmu")
-                    sendMessage(msg.to,"Jujurlah dari sekarang juga")
-                    sendMessage(msg.to,"Jika kau bersuar")
-                    sendMessage(msg.to,"Cahaya kan bersinar")
-                    sendMessage(msg.to,"Ku suka dirimu ku suka")
-                    sendMessage(msg.to,"Ku berlari sekuat tenaga")
-                    sendMessage(msg.to,"Ku suka selalu ku suka")
-                    sendMessage(msg.to,"Ku teriak sebisa suaraku")
-                    sendMessage(msg.to,"Ku suka dirimu ku suka")
-                    sendMessage(msg.to,"Sampaikan rasa sayangku ini")
-                    sendMessage(msg.to,"Ku suka selalu ku suka")
-                    sendMessage(msg.to,"Ku teriakkan ditengah angin")
-                    sendMessage(msg.to,"Ku suka dirimu ku suka")
-                    sendMessage(msg.to,"Walau susah untuk ku bernapas")
-                    sendMessage(msg.to,"Tak akan ku sembunyikan")
-                    sendMessage(msg.to,"Oogoe daiyamondo~")
-                    sendMessage(msg.to,"Katakan dengan berani")
-                    sendMessage(msg.to,"Jika kau diam kan tetap sama")
-                    sendMessage(msg.to,"Janganlah kau merasa malu")
-                    sendMessage(msg.to,"“Suka” itu kata paling hebat!")
-                    sendMessage(msg.to,"“Suka” itu kata paling hebat!")
-                    sendMessage(msg.to,"“Suka” itu kata paling hebat!")
-                    sendMessage(msg.to,"Ungkapkan perasaanmu")
-                    sendMessage(msg.to,"Jujurlah dari sekarang juga..")
-                    sendMessage(msg.to,"SPAM IS DONE")
+            elif msg.text in ["sendspam","Sendspam"]:
+                ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+		ki.sendText(msg.to,"spam")
+
 			
             elif msg.text in ["Ban"]:
                 wait["wblacklist"] = True
@@ -1792,13 +1870,13 @@ def bot(op):
                     ki.sendText(msg.to,"Blacklist emang pantas tuk di usir")
                     kk.sendText(msg.to,"Blacklist emang pantas tuk di usir")
                     kc.sendText(msg.to,"Blacklist emang pantas tuk di usir")
-            elif msg.text in ["Clear"]:
+            elif msg.text in ["Clearinvites"]:
                 if msg.toType == 2:
                     group = cl.getGroup(msg.to)
                     gMembMids = [contact.mid for contact in group.invitee]
                     for _mid in gMembMids:
                         cl.cancelGroupInvitation(msg.to,[_mid])
-                    cl.sendText(msg.to,"I pretended to cancel and canceled.")
+                    cl.sendText(msg.to,"done bos ku")
             elif "random:" in msg.text:
                 if msg.toType == 2:
                     strnum = msg.text.replace("random:","")
@@ -1814,20 +1892,20 @@ def bot(op):
                     except:
                         cl.sendText(msg.to,"Error")	
 				
-            elif "albumâ" in msg.text:
+            elif "album" in msg.text:
                 try:
-                    albumtags = msg.text.replace("albumâ","")
+                    albumtags = msg.text.replace("album","")
                     gid = albumtags[:6]
                     name = albumtags.replace(albumtags[:34],"")
                     cl.createAlbum(gid,name)
                     cl.sendText(msg.to,name + "created an album")
                 except:
                     cl.sendText(msg.to,"Error")
-            elif "fakecâ" in msg.text:
+            elif "fake" in msg.text:
                 try:
                     source_str = 'abcdefghijklmnopqrstuvwxyz1234567890@:;./_][!&%$#)(=~^|'
                     name = "".join([random.choice(source_str) for x in xrange(10)])
-                    anu = msg.text.replace("fakecâ","")
+                    anu = msg.text.replace("fake","")
                     cl.sendText(msg.to,str(cl.channel.createAlbum(msg.to,name,anu)))
                 except Exception as e:
                     try:
