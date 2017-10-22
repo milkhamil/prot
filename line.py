@@ -80,7 +80,6 @@ helpMessage ="""✖--------------------------------------------------------✖
 ✖                        Author By                     ✖
 ✖  www.instagram.com/milkhamil  ✖
 ✖--------------------------------------------------------✖
-
 """
 KAC=[cl,ki,kk,kc]
 mid = cl.getProfile().mid
@@ -109,6 +108,9 @@ wait = {
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
+    "Protectgr":False,
+    "Protectjoin":False,
+    "Protectcancl":False,
     "protectionOn":True,
     "atjointicket":True,
     }
@@ -203,6 +205,29 @@ def bot(op):
                         X.preventJoinByTicket = True
                         cl.updateGroup(X)
                         Ti = cl.reissueGroupTicket(op.param1)
+
+        if op.type == 11:
+           if wait["Protectgr"] == True:
+               if op.param2 not in Bots:
+                   G = ka.getGroup(op.param1)
+                   G.preventJoinByTicket = True
+                   random.choice(DEF).kickoutFromGroup(op.param1,[op.param2])
+                   random.choice(DEF).updateGroup(G)
+		
+
+        if op.type == 13:
+           if wait["Protectcancl"] == True:
+               if op.param2 not in Bots:
+                  group = ka.getGroup(op.param1)
+                  gMembMids = [contact.mid for contact in group.invitee]
+                  random.choice(DEF).cancelGroupInvitation(op.param1, gMembMids)
+
+
+        if op.type == 17:
+           if wait["Protectjoin"] == True:
+               if op.param2 not in Bots:
+                   random.choice(DEF).kickoutFromGroup(op.param1,[op.param2])
+               
 
         if op.type == 13:
             print op.param1
@@ -1423,7 +1448,62 @@ def bot(op):
                         print "kicker ok"
                         G.preventJoinByTicket = True
                         kc.updateGroup(G)
-#-----------------------------------------------
+			
+	    elif msg.text in ["Cancl on","cancl on"]:
+              if msg.from_ in admin:
+                if wait["Protectcancl"] == True:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Cancel All Invited On")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["Protectcancl"] = True
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Cancel All Invited On")
+                    else:
+                        cl.sendText(msg.to,"done")
+            elif msg.text in ["Cancl off","cancl off"]:
+              if msg.from_ in admin:
+                if wait["Protectcancl"] == False:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Cancel All Invited Off")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["Protectcancl"] = False
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Cancel All Invited Off")
+                    else:
+                        cl.sendText(msg.to,"done")
+#------------------------fungsi protect------------------
+            elif msg.text in ["Pro on","pro on"]:
+              if msg.from_ in admin:
+                if wait["Protectgr"] == True:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Protect Group On")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["Protectgr"] = True
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Protect Group On")
+                    else:
+                        cl.sendText(msg.to,"done")
+            elif msg.text in ["Pro off","pro off"]:
+              if msg.from_ in admin:
+                if wait["Protectgr"] == False:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Protect Group Off")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["Protectgr"] = False
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Protect Group Off")
+                    else:
+                        cl.sendText(msg.to,"done")
+			
+#------------------------fungsi bye-----------------------
             elif msg.text in ["Bye all"]:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
@@ -1688,22 +1768,34 @@ def bot(op):
 					cl.sendMessage(msg)
 					cl.sendMessage(msg)
 					
-  #-------------Fungsi Tagall---------------#
+  #-------------Fungsi Tag All Start---------------#
             elif msg.text in ["Tagall"]:
-				if msg.from_ in admin:
-						group = cl.getGroup(msg.to)
-						mem = [contact.mid for contact in group.members]
-						for mm in mem:
-							xname = cl.getContact(mm).displayName
-							xlen = str(len(xname)+1)
-							msg.contentType = 0
-							msg.text = "@"+xname+" "
-							msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(mm)+'}]}','EMTVER':'4'}
-							try:
-								ki.sendMessage(msg)
-							except Exception as error:
-														print error
-#-----------------------------------------------
+                  group = cl.getGroup(msg.to)
+                  nama = [contact.mid for contact in group.members]
+
+                  cb = ""
+                  cb2 = ""
+                  strt = int(0)
+                  akh = int(0)
+                  for md in nama:
+                      akh = akh + int(6)
+
+                      cb += """{"S":"""+json.dumps(str(strt))+""","E":"""+json.dumps(str(akh))+""","M":"""+json.dumps(md)+"},"""
+
+                      strt = strt + int(7)
+                      akh = akh + 1
+                      cb2 += "@nrik \n"
+
+                  cb = (cb[:int(len(cb)-1)])
+                  msg.contentType = 0
+                  msg.text = cb2
+                  msg.contentMetadata ={'MENTION':'{"MENTIONEES":['+cb+']}','EMTVER':'4'}
+
+                  try:
+                      cl.sendMessage(msg)
+                  except Exception as error:
+                      print error
+    #-------------Fungsi Tag All Finish---------------#
 
             elif msg.text in ["Cv say hi"]:
                 ki.sendText(msg.to,"Hi buddy 􀜁􀅔Har Har􏿿")
@@ -1715,14 +1807,11 @@ def bot(op):
                 kk.sendText(msg.to,"Cv2")
                 kc.sendText(msg.to,"Cv3")
 #--------------------fungsi speed---------------------------
-            elif msg.text in ["Sp","Speed","speed"]:
+            elif msg.text in ["Speed","speed"]:
                 start = time.time()
-                cl.sendText(msg.to, "Progress...")
+                cl.sendText(msg.to, "Ngitung dulu bentaran...")
                 elapsed_time = time.time() - start
                 cl.sendText(msg.to, "%sseconds" % (elapsed_time))
-                ki.sendText(msg.to, "%sseconds" % (elapsed_time))
-                kk.sendText(msg.to, "%sseconds" % (elapsed_time))
-                kc.sendText(msg.to, "%sseconds" % (elapsed_time))
 
 #------------------------------------------------------------------	
             elif "Steal home @" in msg.text:            
