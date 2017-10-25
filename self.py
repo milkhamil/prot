@@ -23,71 +23,66 @@ ki3.loginResult()
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage ="""     ௹ MIL SELF BOTs ௹
-     °°°°°°°°°°°°°°°°°°°°°°°°°°
+helpMessage ="""         ӍіL ՏЄLҒ ѣѺҬՏ 
+         -------------------------✁ 
 • [Id]
 • [Mid]
-• [Me]
-• [Speed]
-• [TL 「Text」]
-• [Sendspam]
-• [MyName ]
-• [Gift]
+• [Me] 
+• [TL  "Text"]
+• [MyName]
+• [I Gift]
+• [Mid  "mid"]
 • [Group id]
-• [Group cancel 「Nominal」]
-• [album 「id」]
-• [Hapus album 「id」]
-• [Contact on/off] 
-• [Auto join on/off]
 • [Group cancel]
-• [Auto leave on/off]
-• [Auto add on/off] 
 • [Jam on/off]
-• [Jam up]
+• [Up]
 • [Ban:on] 
 • [Unban:on]
 • [Banlist]
-• [Comment on/off]
-• [Comment set「Text」]
+• [Come set]
 • [Mcheck] 
-• [Message check] 
-• [Getcontact「mid」]
-• [Myname「Text」]
-• [Botname1-6「Text」]
-• [Mybio「Text」]
-• [Allbio「Text」] 
-  
-􀐂􀇯pin􏿿Command in Group􀐂􀇯pin􏿿
-=====================
-• [Cek 「@」]
+• [Message Confirmation] 
+• [Mybio: "Text"]  
+• [Allbio: "Text"] 
+
+      Command In Group
+      -------------------------------✁ 
 • [Link on/off]
-• [Invite「mid」] 
-• [Kick「mid」]
-• [Ban「mid」]
+• [Link off] 
+• [Invite "mid"] 
+• [Kmid: Kick by mid] 
 • [Ginfo] 
 • [Cancel]
 • [Backup]
-• [Tagall]
-• [Random「Nominal」]
-• [Gname「Nama grup」]
+• [Gn 「Nama grup」
 • [Gurl]
-• [Nk「Tag」]
-• [Ban「Tag/Mid」]
-• [Unban「Tag/Mid」]
-• [Protect on]
+• [gurl  "Gid"]
+• [Nk "Name"]
+• [NK:]
+• [Ban:]
+• [Unban:]
+
+         Auto Command
+         -------------------------✁ 
+• [Contact on/off] 
+• [Auto join on/off] 
+• [Auto leave on/off]
+• [Auto add on/off] 
+• [Com on/off]
+• [Protect on/off]
 • [qrprotect on/off]
 • [Inviteprotect on/off]
 • [Cancelprotect on/off]
 
-􀐂􀇰pin􏿿Command Protect 􀐂􀇰pin􏿿
-====================
+        Assist Command
+        ----------------------------✁ 
 • [Kb all]
 • [Kb Key]
 • [Kb1-6 in]
 • [Kb1-6 bye]
 • [Respons]
-• [allRespons]
-• [Bye all]
+• [Bye all ]
+
 """
 helo=""
 
