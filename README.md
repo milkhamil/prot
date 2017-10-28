@@ -1,8 +1,7 @@
-# LINE TCR
-Forked from LINEALPHA [MerkKremont]
-
-fixing some error and delete unusable code 
-
+-apt get update
+-apt get install python
+-apt get install git
+-apt get install pythonpip
 ## Require to install
 ```
 pip install rsa
